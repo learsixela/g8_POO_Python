@@ -32,4 +32,5 @@ print("con metodo",pelota_futbol.color)
 #a traves de setter
 pelota_futbol.colores = ""
 print("con setter",pelota_futbol.color)
-
+()
+print(pelota_futbol)

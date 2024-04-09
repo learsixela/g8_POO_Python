@@ -36,6 +36,6 @@ class Pelota():
     def setColor(self, value):
         self.color = value
 
-
+    #sobrecarga-> modificar el comportamiento del metodo
     def __str__(self):
-        return f"forma {self.forma},  "
+        return f"forma: {self.forma}, color: {self.color}, material: {self.material} "
