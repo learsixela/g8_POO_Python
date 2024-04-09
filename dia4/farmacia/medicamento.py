@@ -34,3 +34,12 @@ class Medicamento():
 
         else:
             print("El valor debe ser mayor cero")
+
+    # Este es el método que se debe agregar
+    def __eq__(self, other):
+        return self.nombre.lower() == other.nombre.lower()
+    
+    def __iadd__(self, other):
+        if self == other:#se dirige al metodo __eq__
+            self.stock += other.stock
+        return self
