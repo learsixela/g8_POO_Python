@@ -43,3 +43,7 @@ class Medicamento():
         if self == other:#se dirige al metodo __eq__
             self.stock += other.stock
         return self
+    
+    def __str__(self):
+        print("METODO __str___")
+        return f"NOMBRE:{self.nombre}\nSTOCK: {self.stock}\nPRECIO:{self.precio_final} "

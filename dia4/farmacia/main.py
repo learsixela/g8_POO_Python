@@ -1,4 +1,5 @@
 from medicamento import Medicamento
+import time
 
 opcion_ingreso = int(input("¿Desea agregar un medicamento?\n1. Sí\n2. No\n"))
 ingresados = []
@@ -16,7 +17,7 @@ while opcion_ingreso == 1:
         ingresados.append(m)
     
     precio_bruto = int(input("\nIngrese precio bruto del medicamento:\n"))
-    m.precio = precio_bruto    
+    m.precio = precio_bruto 
 
     print(f"\n***** DATOS MEDICAMENTO {m.nombre} *****")
     print(f"PRECIO BRUTO: ${m.precio_bruto}")
@@ -27,5 +28,9 @@ while opcion_ingreso == 1:
         
     
     print(f"\nLa farmacia cuenta con {len(ingresados)} medicamento(s)\n")
+    for med_ingresado in ingresados:
+        print(med_ingresado)
+        print("")
 
+    time.sleep(3)
     opcion_ingreso = int(input("¿Desea agregar un medicamento?\n1. Sí\n2. No\n"))
