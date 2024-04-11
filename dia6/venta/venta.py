@@ -3,24 +3,28 @@ class DetalleVentaItem():
         self.__producto = producto
         self.__cantidad = cantidad
 
-        ##getters
-        @property
-        def producto(self):
-            return self.__producto
-        
-        @property
-        def cantidad(self):
-            return self.__cantidad
-        
-        ##setters
-        @producto.setter
-        def producto(self,producto: str):
-            self.__producto = producto
-        
-        @cantidad.setter
-        def cantidad(self, cantidad: int):
-            self.__cantidad = cantidad
+    ##getters
+    @property
+    def producto(self):
+        return self.__producto
+    
+    @property
+    def cantidad(self):
+        return self.__cantidad
+    
+    ##setters
+    @producto.setter
+    def producto(self,producto: str):
+        self.__producto = producto
+    
+    @cantidad.setter
+    def cantidad(self, cantidad: int):
+        self.__cantidad = cantidad
 
+    def __str__(self):
+        
+        return f"{self.producto} - {self.cantidad}"
+        
 class DetalleVenta():
     def __init__(self):
         self.__items = []
@@ -30,9 +34,10 @@ class DetalleVenta():
 
     def __str__(self):
         retorno = (":::::::: DETALLE DE ESTA VENTA :::::::::\n PRODUCTO\tCANTIDAD\n")
+    
+
         items = [
-            for i in self.__items
-                f"{i.producto}\t\t{i.cantidad}\n"
+            f"{i.producto}\t\t{i.cantidad}\n" for i in self.__items
         ]
         return f"{retorno}{''.join(items)}"
 
