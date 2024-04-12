@@ -5,6 +5,7 @@ class Medicamento():
 
     @staticmethod
     def validar_mayor_a_cero(numero: int):
+        Medicamento.descuento = 0.04
         return numero > 0
     
     def asigna_precio(self, precio_entregado: int):
